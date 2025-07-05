@@ -36,6 +36,32 @@ Adjust the input features in the sidebar to get an estimated property price.
 model_accuracy = 0.63  # Or load this dynamically if needed
 st.sidebar.write(f'**Model Performance:**  \n{model_accuracy * 100:.2f}% Variance Explained')
 
+st.markdown('---')
+
+
+st.write("""
+
+### Model Considerations and Observations
+
+**It is important to note that the model’s predictions are strongly influenced by size-related features, such as the number of bedrooms, number of bathrooms, living area, and lot area.**  
+**These features naturally have a high impact on property prices and tend to dominate the model’s decision-making process.**
+
+**As a result, the model may occasionally predict higher prices for properties with larger sizes, even if those properties are classified as high risk.**  
+**This occurs because the model prioritizes size over risk in many scenarios, especially when the property’s physical attributes are substantial.**
+
+While this reflects trends in the historical data, future improvements could involve:
+- **Feature scaling** to balance the influence of size and risk features.
+- **Interaction terms** to help the model understand how risk should adjust size-based pricing.
+- **Risk-aware loss functions** that penalize high-price predictions for high-risk properties.
+- **Additional data balancing techniques** to ensure that risk receives adequate attention during training.
+
+These enhancements would help the model generate more **risk-sensitive and balanced price predictions.**
+
+""")
+
+# Separator line
+st.markdown('---')
+
 size_mapping = {'small': 1, 'medium': 2, 'large': 3, 'Invalid': 0}
 
 df = pd.read_csv('./clean_datasets/real_estate_encoded.csv')  # Your file with State and State_Encoded columns
