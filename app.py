@@ -70,8 +70,8 @@ state_encoded = df.loc[df['state'] == selected_state, 'state_encoded'].values[0]
 
 st.write(f'Frequency Encoding: {state_encoded:.4f}')
 
-bath_categories = [cat for cat in df['num_full_baths_categorical'].unique() if cat.lower() != 'invalid']
-bed_categories = [cat for cat in df['num_bedrooms_categorical'].unique() if cat.lower() != 'invalid']
+bath_categories = [cat for cat in df['num_full_baths_categorical'].unique() if cat != 'Invalid']
+bed_categories = [cat for cat in df['num_bedrooms_categorical'].unique() if cat != 'Invalid']
 
 
 
@@ -85,6 +85,7 @@ else:
 
 bathrooms = st.slider('Number of Bathrooms', 0, 6, 2)
 if bathrooms == 0 :
+    selected_bath_category = 'Invalid'
     st.info('Bathrooms size category automatically set to **Invalid** because number of bathrooms is 0.')
 else:
     selected_bath_category = st.sidebar.selectbox('Select Bathrooms Size Category', bath_categories)
