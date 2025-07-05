@@ -21,7 +21,7 @@ EDA is fully performed inside the data preparation file.
 ### 📂 Project Structure
 
 REAL_ESTATE-_MODEL/
-├── .ipynb_checkpoints/'          # Jupyter notebook checkpoints' 
+├── .ipynb_checkpoints/'                             # Jupyter notebook checkpoints'. 
 ├── clean_datasets/'              # Encoded datasets for model training'
 ├── model/'                       # Trained real estate model  
 ├── raw_datasets/     &nbsp;       # Raw datasets (real estate + external risk data)  
