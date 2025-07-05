@@ -46,12 +46,12 @@ Interactive Streamlit Dashboard for real-time price prediction.
 
 ### 🛠️ Tech Stack
 
-Python
-Pandas, NumPy
-Scikit-learn
-Streamlit
-Seaborn, Matplotlib for visualizations
-Git & GitHub for version control
+Python  
+Pandas, NumPy  
+Scikit-learn  
+Streamlit  
+Seaborn, Matplotlib for visualizations  
+Git & GitHub for version control  
 
 ### 📦 Setup Instructions
 
@@ -69,10 +69,10 @@ Git & GitHub for version control
    streamlit run app.py
 
 ### ✅ Deliverables
-Real Estate Price Prediction Model (Risk-Adjusted)
-Streamlit Dashboard
-Fully Prepared and Merged Dataset
-Combined Data Preparation + EDA Notebook
+Real Estate Price Prediction Model (Risk-Adjusted)  
+Streamlit Dashboard  
+Fully Prepared and Merged Dataset  
+Combined Data Preparation + EDA Notebook  
 
 ### ✍️ Author
 
