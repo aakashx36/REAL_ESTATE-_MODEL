@@ -78,6 +78,39 @@ Streamlit Dashboard
 Fully Prepared and Merged Dataset  
 Combined Data Preparation + EDA Notebook  
 
+
+###📝 Model Behavior Explanation
+
+
+During the analysis, it was observed that the model’s price predictions are primarily driven by size-related features, including:
+
+Living Area
+
+Lot Area
+
+Number of Bedrooms
+
+Number of Bathrooms
+
+Others
+
+These features are naturally strong predictors of property value and tend to dominate the model’s decision-making process. As a result, in some cases, the model predicts higher prices for properties classified as high risk, particularly when those properties are large and have a higher number of beds and baths.
+
+This behavior indicates that the model heavily relies on physical property attributes and gives comparatively less weight to the risk score.
+
+While this aligns with the patterns in the historical dataset, it may not fully account for the impact that risk should have on price. Future improvements could include:
+
+Feature scaling or normalization to balance the influence of size and risk features.
+
+Introducing interaction features between size and risk to help the model understand that risk should moderate the effect of size.
+
+Applying custom loss penalties for overpricing high-risk properties.
+
+Conducting model rebalancing or stratification to ensure the model learns the importance of risk across all property types.
+
+These steps would help the model make more risk-sensitive pricing prediction.
+
+
 ### ✍️ Author
 
 Aakash Bansal
