@@ -5,7 +5,7 @@ import joblib
 st.title("Real Estate Price Evaluation app ")
 st.sidebar.title('About the Model')
 st.sidebar.markdown('''
-### Real Estate Price Evaluation Model
+### Real Estate Price Evaluation Model 
 
 This model predicts **real estate property prices** based on the following key features:
 -  **State:** Location of the property.
