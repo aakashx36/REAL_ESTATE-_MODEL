@@ -61,7 +61,7 @@ bath_size_encoded = size_mapping[selected_bath_category]
 bed_size_encoded = size_mapping[selected_bed_category]
 
 lot_area = st.number_input('Lot Area (sq_m)', min_value=27, max_value=5000, value=1000)
-living_area = st.number_input('Living Area (sq_m)', min_value=300, max_value=600, value=400)
+living_area = st.number_input('Living Area (sq_m)', min_value=27, max_value=600, value=400)
 risk_score = st.slider('Total Risk Score (Normalized)', min_value=0.0, max_value=1.0, value=0.5)
 
 
