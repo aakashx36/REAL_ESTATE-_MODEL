@@ -1,0 +1,5 @@
+- US Storm Hunters (link - https://www.kaggle.com/datasets/arturdragunov/usa-weekly-real-estate-listings)
+- USA Weekly Real Estate Listings 2022-2023 (link - https://www.kaggle.com/datasets/arturdragunov/usa-weekly-real-estate-listings?select=USA_clean_unique.csv)
+- USGS Earthquakes 2024 (link - https://www.kaggle.com/datasets/rupindersinghrana/usgs-earthquakes-2024)
+- Earthquake data by USGS (6 Jun,23 - 6 Jul,23) (link - https://www.kaggle.com/datasets/mauryansshivam/earthquake-data-by-usgs-6-jun23-6-jul23)
+- FEMA's National Flood Insurance Policy Database (link - https://www.kaggle.com/datasets/lynma01/femas-national-flood-insurance-policy-database)
