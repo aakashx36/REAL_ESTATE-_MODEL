@@ -36,10 +36,10 @@ Adjust the input features in the sidebar to get an estimated property price.
 model_accuracy = 0.63  # Or load this dynamically if needed
 st.sidebar.write(f'**Model Performance:**  \n{model_accuracy * 100:.2f}% Variance Explained')
 
-st.markdown('---')
+st.sidebar.markdown('---')
 
 
-st.write("""
+st.sidebar.write("""
 
 ### Model Considerations and Observations
 
@@ -60,7 +60,7 @@ These enhancements would help the model generate more **risk-sensitive and balan
 """)
 
 # Separator line
-st.markdown('---')
+st.sidebar.markdown('---')
 
 size_mapping = {'small': 1, 'medium': 2, 'large': 3, 'Invalid': 0}
 
