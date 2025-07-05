@@ -80,7 +80,7 @@ if bedrooms == 0:
     selected_bed_category = 'Invalid'
     st.info('Bedrooms size category automatically set to **Invalid** because number of bedrooms is 0.')
 else:
-    selected_bed_category = st.sidebar.selectbox('Select Bedrooms Size Category', bed_categories)
+    selected_bed_category = st.selectbox('Select Bedrooms Size Category', bed_categories)
 
 
 bathrooms = st.slider('Number of Bathrooms', 0, 6, 2)
@@ -88,7 +88,7 @@ if bathrooms == 0 :
     selected_bath_category = 'Invalid'
     st.info('Bathrooms size category automatically set to **Invalid** because number of bathrooms is 0.')
 else:
-    selected_bath_category = st.sidebar.selectbox('Select Bathrooms Size Category', bath_categories)
+selected_bath_category = st.selectbox('Select Bathrooms Size Category', bath_categories)
 bath_size_encoded = size_mapping[selected_bath_category]
 bed_size_encoded = size_mapping[selected_bed_category]
 
