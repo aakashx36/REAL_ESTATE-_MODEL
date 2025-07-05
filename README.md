@@ -66,7 +66,11 @@ Git & GitHub for version control
 
 ##### 3. Run the streamlit app
 
-   streamlit run app.py
+   streamlit run app.py  
+
+####  4. Streamlit app link  
+
+   https://real-estate-model.streamlit.app/  
 
 ### ✅ Deliverables
 Real Estate Price Prediction Model (Risk-Adjusted)  
