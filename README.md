@@ -79,7 +79,7 @@ Fully Prepared and Merged Dataset
 Combined Data Preparation + EDA Notebook  
 
 
-###📝 Model Behavior Explanation
+### 📝 Model Behavior Explanation
 
 
 During the analysis, it was observed that the model’s price predictions are primarily driven by size-related features, including:
