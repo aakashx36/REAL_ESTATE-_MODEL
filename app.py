@@ -70,18 +70,24 @@ state_encoded = df.loc[df['state'] == selected_state, 'state_encoded'].values[0]
 
 st.write(f'Frequency Encoding: {state_encoded:.4f}')
 
-bath_categories = df['num_full_baths_categorical'].unique()
-bed_categories = df['num_bedrooms_categorical'].unique()
+bath_categories = [cat for cat in df['num_full_baths_categorical'].unique() if cat.lower() != 'invalid']
+bed_categories = [cat for cat in df['num_bedrooms_categorical'].unique() if cat.lower() != 'invalid']
 
 
 
 bedrooms = st.slider('Number of Bedrooms', 0, 6, 3)
-selected_bed_category = st.selectbox('Select Bedroom Size Category', bed_categories)
+if bedrooms == 0:
+    selected_bed_category = 'Invalid'
+    st.info('Bedrooms size category automatically set to **Invalid** because number of bedrooms is 0.')
+else:
+    selected_bed_category = st.sidebar.selectbox('Select Bedrooms Size Category', bed_categories)
 
 
 bathrooms = st.slider('Number of Bathrooms', 0, 6, 2)
-selected_bath_category = st.selectbox('Select Bathroom Size Category', bath_categories)
-
+if bathrooms == 0 :
+    st.info('Bathrooms size category automatically set to **Invalid** because number of bathrooms is 0.')
+else:
+    selected_bath_category = st.sidebar.selectbox('Select Bathrooms Size Category', bed_categories)
 bath_size_encoded = size_mapping[selected_bath_category]
 bed_size_encoded = size_mapping[selected_bed_category]
 
@@ -101,9 +107,20 @@ input_data = pd.DataFrame({
     'size_bed_encoded': [bed_size_encoded]
 })
 
+display_data = pd.DataFrame({
+    'Lot Area (sq_m)': [lot_area],
+    'Living Area (sq_m)': [living_area],
+    'Number of Bedrooms': [bedrooms],
+    'Number of Bathrooms': [bathrooms],
+    'Risk Score': [risk_score],
+    'State Code': [state_encoded],
+    'Bathroom Size Encoding': [bath_size_encoded],
+    'Bedroom Size Encoding': [bed_size_encoded]
+})
+
 # Display Input Summary
 st.write('### Input Feature Summary:')
-st.write(input_data)
+st.write(display_data)
 
 # Prediction
 if st.button('Predict Price'):
