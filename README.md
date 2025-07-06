@@ -58,7 +58,6 @@ Git & GitHub for version control
 ##### 1. Clone the repository :
 
    git clone https://github.com/yourusername/REAL_ESTATE-_MODEL.git
-   cd REAL_ESTATE-_MODEL
    
 ##### 2. Install the required libraries
 
