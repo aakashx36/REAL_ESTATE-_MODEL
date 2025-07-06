@@ -39,7 +39,7 @@ Classifies beds and baths  into: Small, Medium, Large.
 Analyzes additional features:  
 Number of Beds  
 Number of Baths  
-Lot Area  
+Lot Area (Total area)
 Living Area  
 Complete EDA is performed in the data preparation file.  
 Interactive Streamlit Dashboard for real-time price prediction.  
